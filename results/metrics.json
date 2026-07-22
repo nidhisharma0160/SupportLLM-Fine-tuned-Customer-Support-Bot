@@ -1,0 +1,127 @@
+{
+    "dataset_name": "bitext/Bitext-customer-support-llm-chatbot-training-dataset",
+    "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "test_set_size": 100,
+    "baseline": {
+        "accuracy": 0.23,
+        "macro_f1": 0.20716331836550417,
+        "weighted_f1": 0.23883525490902544,
+        "rouge_l": 0.18332202006848988
+    },
+    "fine_tuned": {
+        "accuracy": 0.46,
+        "macro_f1": 0.5215065715065714,
+        "weighted_f1": 0.4853012753012753,
+        "rouge_l": 0.1738761400039383
+    },
+    "per_intent_f1": {
+        "cancel_order": {
+            "baseline": 0.03278688524590164,
+            "fine_tuned": 0.05405405405405406
+        },
+        "change_order": {
+            "baseline": 0.3333333333333333,
+            "fine_tuned": 0.36363636363636365
+        },
+        "change_shipping_address": {
+            "baseline": 0.8,
+            "fine_tuned": 0.5714285714285714
+        },
+        "check_cancellation_fee": {
+            "baseline": 0.0,
+            "fine_tuned": 0.6666666666666666
+        },
+        "check_invoice": {
+            "baseline": 0.6153846153846154,
+            "fine_tuned": 0.7272727272727273
+        },
+        "check_payment_methods": {
+            "baseline": 0.6666666666666666,
+            "fine_tuned": 0.75
+        },
+        "check_refund_policy": {
+            "baseline": 0.2857142857142857,
+            "fine_tuned": 0.5714285714285714
+        },
+        "complaint": {
+            "baseline": 0.0,
+            "fine_tuned": 1.0
+        },
+        "contact_customer_service": {
+            "baseline": 0.4,
+            "fine_tuned": 1.0
+        },
+        "contact_human_agent": {
+            "baseline": 0.5714285714285714,
+            "fine_tuned": 1.0
+        },
+        "create_account": {
+            "baseline": 0.2857142857142857,
+            "fine_tuned": 0.5714285714285714
+        },
+        "delete_account": {
+            "baseline": 0.0,
+            "fine_tuned": 0.5714285714285714
+        },
+        "delivery_options": {
+            "baseline": 0.6666666666666666,
+            "fine_tuned": 0.5
+        },
+        "delivery_period": {
+            "baseline": 0.0,
+            "fine_tuned": 0.75
+        },
+        "edit_account": {
+            "baseline": 0.25,
+            "fine_tuned": 0.3333333333333333
+        },
+        "get_invoice": {
+            "baseline": 0.0,
+            "fine_tuned": 1.0
+        },
+        "get_refund": {
+            "baseline": 0.0,
+            "fine_tuned": 0.0
+        },
+        "newsletter_subscription": {
+            "baseline": 0.0,
+            "fine_tuned": 1.0
+        },
+        "payment_issue": {
+            "baseline": 0.4,
+            "fine_tuned": 0.75
+        },
+        "place_order": {
+            "baseline": 0.0,
+            "fine_tuned": 0.0
+        },
+        "recover_password": {
+            "baseline": 0.0,
+            "fine_tuned": 0.0
+        },
+        "registration_problems": {
+            "baseline": 0.0,
+            "fine_tuned": 0.2
+        },
+        "review": {
+            "baseline": 0.2857142857142857,
+            "fine_tuned": 0.5
+        },
+        "set_up_shipping_address": {
+            "baseline": 0.0,
+            "fine_tuned": 0.0
+        },
+        "switch_account": {
+            "baseline": 0.0,
+            "fine_tuned": 1.0
+        },
+        "track_order": {
+            "baseline": 0.0,
+            "fine_tuned": 0.2
+        },
+        "track_refund": {
+            "baseline": 0.0,
+            "fine_tuned": 0.0
+        }
+    }
+}

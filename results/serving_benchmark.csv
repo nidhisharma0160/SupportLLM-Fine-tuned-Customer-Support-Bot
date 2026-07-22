@@ -1,0 +1,5 @@
+Metric,Continuous Batching (vLLM),Naive (HF),Speedup
+Throughput (req/s),3.8795,3.4421,1.13x
+p50 Latency (s),0.7059,0.8624,N/A
+p95 Latency (s),1.4074,0.9182,N/A
+Avg Latency (s),0.7729,0.8467,N/A

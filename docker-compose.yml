@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.10.0
+    container_name: support_llm_mlflow
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/app/mlruns
+    command: mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri sqlite:///app/mlruns/mlflow.db --default-artifact-root /app/mlruns
+
+  api:
+    build: .
+    container_name: support_llm_api
+    ports:
+      - "8000:8000"
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+      - HF_TOKEN=${HF_TOKEN:-}
+    volumes:
+      - ./results:/app/results
+      - ./model_assets:/app/model_assets
+      - ./mlruns:/app/mlruns
+    # Pass NVIDIA GPU to the container if available on the host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    depends_on:
+      - mlflow

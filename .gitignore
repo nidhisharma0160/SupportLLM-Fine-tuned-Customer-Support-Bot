@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and runtime
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+
+# Project specific ignores
+data/
+mlruns/
+model_assets/*
+*.safetensors
+mlflow.db*
+tmp_results/
+
+# Except the adapter files that we want to commit (if we decide to save it there)
+!model_assets/adapter/
+!model_assets/adapter/**
